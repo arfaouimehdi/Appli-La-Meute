@@ -1,19 +1,14 @@
-import { useState } from "react";
+
 import Statistiques from "./cardComponents/Statistiques";
+
 export default function Card() {
-    const [atk, setAtk] = useState(22)
-    let pv = 50;
 
-    function downHealth(){
-        pv -= 5;
-        console.log(pv)
-
-    }
-    function upHealth(){
-        pv += 5;
-        console.log(pv)
-
-    }
+    const allStat=[
+        {stat :"Santé",value : 50, unit :"PV"},
+        {stat :"Energie",value : 40, unit :"PM"},
+        {stat :"Puissance",value : 30, unit :"Atk"},
+    ]
+    
   return (
     <div className="flex flex-col border-2 border-neutral-500 w-[250px] h-[400px] rounded-xl customShadow overflow-hidden">
       <div className="w-[250px] h-[250px] overflow-hidden">
@@ -27,10 +22,10 @@ export default function Card() {
         <p className="text-xl text-center font-bold">Boucanix</p>
         {/*flex flex-col c'est un display flex avec flex-direction les enfant en colonne*/}
         <div className="flex flex-col">
-            {/*props recuperation dans Statistique.jsx*/}
-          <Statistiques stat="Santé" value="50" unit="PV"/>
-          <Statistiques stat="Energie"value="25" unit="PM"/>
-          <Statistiques stat="Puissance"value="20" unit="ATK"/>
+            {allStat.map((oneStat)=>(
+               <Statistiques stat={oneStat.stat} value={oneStat.value} unit={oneStat.unit}/> 
+            ))}
+
         </div>
         <div className="flex justify-between mt-2 ">
           <button className="px-2 py-1 bg-red-500 border-2 border-neutral-400 rounded-xl hover:border-neutral-700 hover:opacity-90 duration-300">
