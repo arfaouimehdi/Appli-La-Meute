@@ -28,9 +28,9 @@ export default function Card() {
         {/*flex flex-col c'est un display flex avec flex-direction les enfant en colonne*/}
         <div className="flex flex-col">
             {/*props recuperation dans Statistique.jsx*/}
-          <Statistiques stat="Santé" value="50"/>
-          <Statistiques stat="Energie"value="25"/>
-          <Statistiques stat="Puissance"value="20"/>
+          <Statistiques stat="Santé" value="50" unit="PV"/>
+          <Statistiques stat="Energie"value="25" unit="PM"/>
+          <Statistiques stat="Puissance"value="20" unit="ATK"/>
         </div>
         <div className="flex justify-between mt-2 ">
           <button className="px-2 py-1 bg-red-500 border-2 border-neutral-400 rounded-xl hover:border-neutral-700 hover:opacity-90 duration-300">
