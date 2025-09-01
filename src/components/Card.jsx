@@ -1,4 +1,5 @@
 
+import Buttons from "./Buttons";
 import Statistiques from "./cardComponents/Statistiques";
 
 export default function Card({character}) {
@@ -29,12 +30,8 @@ export default function Card({character}) {
 
         </div>
         <div className="flex justify-between mt-2 ">
-          <button className="px-2 py-1 bg-red-500 border-2 border-neutral-400 rounded-xl hover:border-neutral-700 hover:opacity-90 duration-300">
-            Attaquer
-          </button>
-          <button className="px-2 py-1 bg-green-500 border-2 border-neutral-400 rounded-xl hover:border-neutral-700 hover:opacity-90 duration-300">
-            Défendre
-          </button>
+          <Buttons color="bg-red-500">Attaquer</Buttons>
+          <Buttons color="bg-green-500">Défendre</Buttons>
         </div>
       </div>
     </div>
