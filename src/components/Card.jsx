@@ -1,25 +1,26 @@
 
 import Statistiques from "./cardComponents/Statistiques";
 
-export default function Card() {
+export default function Card({character}) {
+  console.table({character})
 
     const allStat=[
-        {stat :"Santé",value : 50, unit :"PV"},
-        {stat :"Energie",value : 40, unit :"PM"},
-        {stat :"Puissance",value : 30, unit :"Atk"},
+        {stat :"Santé",value : character.health, unit :"PV"},
+        {stat :"Energie",value : character.energie, unit :"PM"},
+        {stat :"Puissance",value : character.power, unit :"Atk"},
     ]
     
   return (
     <div className="flex flex-col border-2 border-neutral-500 w-[250px] h-[400px] rounded-xl customShadow overflow-hidden">
       <div className="w-[250px] h-[250px] overflow-hidden">
         <img
-          src="src/assets/images/personnages/heros.jpg"
-          alt="avatar"
+          src={`src/assets/images/personnages/${character.image}`}
+          alt={character.image}
           className="object-cover duration-300 hover:scale-105"
         />
       </div>
       <div className="p-2">
-        <p className="text-xl text-center font-bold">Boucanix</p>
+        <p className="text-xl text-center font-bold">{character.name}</p>
         {/*flex flex-col c'est un display flex avec flex-direction les enfant en colonne*/}
         <div className="flex flex-col">
             {allStat.map((oneStat)=>(
