@@ -18,6 +18,10 @@ export default function HomePage() {
           energie: 50,
           power: 35,
         },
+        {
+          image: "elfe.jpg",
+          name: "elint"
+        }
       ];
   return (
     <>

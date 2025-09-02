@@ -9,13 +9,22 @@ import AllCharactersPage from "./pages/AllCharactersPage";
 
 const router = createBrowserRouter([
   {
-    path : "/",// correspond a la racine du site
+    // Route parent : la racine du site
+    path : "/",
     element : <Layout/>,
 
+    // Routes enfants = contenu qui change dans le <Outlet /> du Layout
     children : [
-      {path : "/", element:<HomePage/>},
-      {path : "/tous-les-personnages", element:<AllCharactersPage/>},
-      {path : "/*", element:<ErrorPage/>},
+      {
+        path : "/", // Accueil → correspond à "/"
+        element:<HomePage/>},
+      {
+        path : "tous-les-personnages", // Page qui affiche tous les personnages → "/tous-les-personnages"
+        element:<AllCharactersPage/>},
+
+      {
+        path : "*", // Route "catch-all" → si aucune route ne correspond (404)
+        element:<ErrorPage/>},
     ]
 
 
