@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import Layout from "./components/Layout";
 import ErrorPage from "./pages/ErrorPage";
 import AllCharactersPage from "./pages/AllCharactersPage";
+import CreateCharacter from "./pages/CreateCharacter";
 
 const router = createBrowserRouter([
   {
@@ -21,10 +22,14 @@ const router = createBrowserRouter([
       {
         path : "tous-les-personnages", // Page qui affiche tous les personnages → "/tous-les-personnages"
         element:<AllCharactersPage/>},
-
+      {
+        path : "creer-un-personnage",
+        element:<CreateCharacter/>},
       {
         path : "*", // Route "catch-all" → si aucune route ne correspond (404)
         element:<ErrorPage/>},
+
+        
     ]
 
 

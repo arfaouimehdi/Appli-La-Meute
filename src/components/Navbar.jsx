@@ -4,7 +4,8 @@ export default function Navbar() {
   const navItems = [
     { text: "Accueil", path: "/" },
     { text: "Tous les personnages", path: "tous-les-personnages" },
-    { text: "Erreur", path: "*" },
+    { text: "New personnage", path: "creer-un-personnage" },
+    { text: "Autre", path: "*" },
   ];
 
   return (
