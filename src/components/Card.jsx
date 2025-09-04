@@ -7,7 +7,7 @@ export default function Card({character}) {
 
     const allStat=[
         {stat :"Santé",value : character.health, unit :"PV"},
-        {stat :"Energie",value : character.energie, unit :"PM"},
+        {stat :"Energie",value : character.magic, unit :"PM"},
         {stat :"Puissance",value : character.power, unit :"Atk"},
     ]
     

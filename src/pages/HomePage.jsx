@@ -8,14 +8,14 @@ export default function HomePage() {
           image: "heros.jpg",
           name: "Boucanix",
           health: 50,
-          energie: 40,
+          magic: 40,
           power: 30,
         },
         {
           image: "magicienne.jpg",
           name: "Douchka",
           health: 60,
-          energie: 50,
+          magic: 50,
           power: 35,
         },
         {
